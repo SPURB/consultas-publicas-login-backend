@@ -1,0 +1,41 @@
+{
+	"version": "1.0.0",
+	"_comment": 
+		"encryption model is md5. You should use your own model and remove this comment in your 'admin.json'",
+		"values":[
+			{"d4476d5ee9429ca0eb5ecefbc3d11181": "p@ssword123456"},
+			{"1e4e4536fd52975c01e91617198a539b": "contr@sen@123456"},
+			{"f5689de97155b7d9f848a4930dd32277": "libellule"}
+		],
+	"users": [
+		{
+			"firstname": "João",
+			"lastname": "Silva",
+			"email": "jsilva@silva.com.br",
+			"pass": "d4476d5ee9429ca0eb5ecefbc3d11181", 
+			"role": {
+				"total": true
+			}
+		},
+		{
+			"firstname": "Maria",
+			"lastname": "Mercedes",
+			"email": "mmercedes@televisa.mx",
+			"pass": "1e4e4536fd52975c01e91617198a539b",
+			"role": {
+				"total": false,
+				"projects": [1,2]
+			}
+		},
+		{
+			"firstname": "Santos",
+			"lastname": "Dummond",
+			"email": "sdummond@demoiselle.sp.gov.br",
+			"pass": "f5689de97155b7d9f848a4930dd32277", 
+			"role": {
+				"total": false,
+				"projects": [1,2,3]
+			}
+		}
+	]
+}

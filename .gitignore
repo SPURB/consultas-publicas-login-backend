@@ -1,0 +1,12 @@
+# Core administrators object
+admin.json
+
+# Testes
+testes.php
+
+# Logs
+logs
+*.log
+
+# dotenv environment variables file
+.env
