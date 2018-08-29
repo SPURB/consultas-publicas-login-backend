@@ -1,8 +1,11 @@
+# Enviroment variables
+config.json
+
 # Core administrators object
 admin.json
 
-# Testes
-testes.php
+# Leitor de encriptação
+decript.php
 
 # Logs
 logs

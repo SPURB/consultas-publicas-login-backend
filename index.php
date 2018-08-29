@@ -1,7 +1,7 @@
 <?php
 //retornará verdadeiro se dados de post existirem em admin.json
 $validation = array(
-	"status" => "false",
+	"status" => false,
 	"message" => "admin inválido", 
 );
 
@@ -13,12 +13,12 @@ $obj = json_decode($json, true);
 if (isset($_POST['email']) and isset($_POST['pass'])) {
 	foreach ($obj['users'] as $user) {
 		if ($user["email"] == $_POST['email']) {
-			if ( md5($user["pass"]) == md5($_POST['pass'])) {
+			if ( $user["pass"] == md5($_POST['pass'])) {
 				$validation = array(
-					"status" => "true",
+					"status" => true,
 					"message" => "usuário válido",
 					"firstname" => $user['firstname'],
-					"role" => $user['role']
+					"role" => $user['role'],
 				);
 			}
 		}
@@ -26,10 +26,10 @@ if (isset($_POST['email']) and isset($_POST['pass'])) {
 }
 else{
 	$validation = array(
-		"status" => "false",
+		"status" => false,
 		"message" => "inclua email e senha"
 	);
 }
 echo json_encode($validation);
-header('Content-type: application/json');
+header("Content-type: application/json");
 ?>
